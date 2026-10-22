@@ -1,7 +1,7 @@
 ﻿using System.Numerics;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
-namespace BracketMatch
+namespace ContainsDuplicateII
 {
     internal class Program
     {
