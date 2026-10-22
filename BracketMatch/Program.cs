@@ -1,0 +1,35 @@
+﻿using System.Numerics;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+
+namespace BracketMatch
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] nums = { 1, 2, 3, 7, 8,9 }; int k = 2;
+            Program program = new Program();
+     
+            Console.WriteLine(program.ContainsNearbyDuplicate(nums, k));
+
+        
+            Console.ReadLine();
+        }
+        public bool ContainsNearbyDuplicate(int[] nums, int k)
+        {
+           
+            for(int i=0;i<nums.Length;i++)
+            {
+                for(int j= 1+i; j< nums.Length; j++ )
+                {
+                    if (nums[i] == nums[j])
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+    }
+}
