@@ -7,7 +7,7 @@ namespace BracketMatch
     {
         static void Main(string[] args)
         {
-            int[] nums = { 1, 2, 3, 7, 8,9 }; int k = 2;
+            int[] nums = { 1, 2, 3, 1 }; int k = 3;
             Program program = new Program();
      
             Console.WriteLine(program.ContainsNearbyDuplicate(nums, k));
@@ -22,7 +22,8 @@ namespace BracketMatch
             {
                 for(int j= 1+i; j< nums.Length; j++ )
                 {
-                    if (nums[i] == nums[j])
+
+                    if (nums[i] == nums[j] && Math.Abs(i - j) <= k)
                     {
                         return true;
                     }
